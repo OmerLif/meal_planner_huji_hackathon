@@ -1,0 +1,251 @@
+﻿<UserControl x:Class="Hack.RegistrationControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hack"
+             mc:Ignorable="d" 
+             d:DesignHeight="690" d:DesignWidth="500"
+             FontFamily="Nexa">
+    <Grid>
+        <Grid>
+            <!--<Border CornerRadius="50" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#f083da" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>-->
+
+
+            <StackPanel Grid.Row="0"
+                Margin="0,40,0,0">
+                <Image/>
+                <TextBlock 
+                Text="Register" 
+                Foreground="#f2e8cf"
+                FontSize="40"
+                FontFamily="Nexa"
+                HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <Grid>
+                    <TextBlock IsHitTestVisible="False"
+                               Text="Username"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="70,120,0,10"
+                               Opacity="0.5"
+                               FontSize="20">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+
+                    </TextBlock>
+                    <TextBox
+                    FontSize="20"
+                    Foreground="White"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Width="235"
+                    HorizontalContentAlignment="Left"
+                        HorizontalAlignment="Left"
+                        Height="25"
+                        Margin="70,120,0,10"
+                        x:Name="SearchBox"/>
+                </Grid>
+                <Border Width="365"
+                    Height="2"
+                    Background="Wheat"
+                    Opacity="0.5"/>
+
+
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="137*"/>
+                        <ColumnDefinition Width="364*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock IsHitTestVisible="False"
+                               Text="E-Mail"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="70,0,0,0"
+                               Opacity="0.5"
+                               FontSize="20">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=SearchBox1}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+
+                    </TextBlock>
+                    <TextBox
+                    FontSize="20"
+                    Foreground="White"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Width="235"
+                    HorizontalContentAlignment="Left"
+                        HorizontalAlignment="Left"
+                        Height="25"
+                        Margin="70,11,0,11"
+                        x:Name="SearchBox1" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Border Width="365"
+                    Height="2"
+                    Background="Wheat"
+                    Opacity="0.5"/>
+
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="320*"/>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="174*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock IsHitTestVisible="False"
+                               Text=""
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="70,0,0,0"
+                               Opacity="0.5"
+                               FontSize="20">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Password, ElementName=SearchBox2}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <PasswordBox
+                        Password="Password"
+                        Opacity="0.5"
+                    FontSize="20"
+                    Foreground="White"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Width="235"
+                    HorizontalContentAlignment="Left"
+                        HorizontalAlignment="Left"
+                        Height="25"
+                        Margin="65,11,0,11"
+                        x:Name="SearchBox2"/>
+                </Grid>
+                <Border Width="365"
+                    Height="2"
+                    Background="Wheat"
+                    Opacity="0.5"/>
+
+
+
+
+                <TextBox
+                    Text="Pereferences:"
+                    FontSize="20"
+                    Foreground="#f2e8cf"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Width="235"
+                    FontFamily="Nexa"
+                    HorizontalContentAlignment="Left"
+                        HorizontalAlignment="Left"
+                        Height="30"
+                        Margin="65,40,0,0"/>
+
+                <Grid HorizontalAlignment="Center"
+                      Margin="20,20,0,0" Height="38">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Rectangle RadiusX="10" RadiusY="10" Fill="#a7c958" x:Name="btnVegetarian" Margin="15,0,10,-32" MouseDown="btnVegetarian_MouseDown"/>
+                    <Rectangle Grid.Column="1"  RadiusX="10" RadiusY="10" Fill="#a7c958" x:Name="btnVegan" Margin="15,0,10,-32" MouseDown="btnVegan_MouseDown"/>
+                    <Rectangle Grid.Column="2" RadiusX="10" RadiusY="10" Fill="#a7c958" x:Name="btnKosher" Margin="15,0,10,-32" MouseDown="btnKosher_MouseDown"/>
+                    <Image Margin="21,4,18,-26" Source="C:/Users/User/Desktop/resources/pereferences/kosher.png" Stretch="Fill" Grid.Column="2" MouseDown="btnKosher_MouseDown"/>
+                    <Image Margin="22,4,18,-26" Source="C:/Users/User/Desktop/resources/pereferences/vegan1.png" Stretch="Fill" Grid.Column="1" MouseDown="btnVegan_MouseDown"/>
+                    <Image Margin="22,4,18,-26" Source="C:/Users/User/Desktop/resources/pereferences/vegeterian.png" Stretch="Fill" MouseDown="btnVegetarian_MouseDown"/>
+                </Grid>
+
+                <TextBox
+                    Text="Allergies:"
+                    FontSize="20"
+                    Foreground="#f2e8cf"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Width="235"
+                    HorizontalContentAlignment="Left"
+                        HorizontalAlignment="Left"
+                        Height="30"
+                        Margin="65,40,0,10"/>
+
+                <Grid HorizontalAlignment="Center" Height="181">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusX="10" RadiusY="10" Fill="#a7c958" Name="btnGluten" Margin="15,0,10,0" MouseDown="btnGluten_MouseDown">
+                    </Rectangle>
+                    <Rectangle RadiusX="10" RadiusY="10" Fill="#a7c958" Name="btnSoy" Margin="15,0,10,0" Grid.Column="2" MouseDown="btnSoy_MouseDown"></Rectangle>
+                    <Rectangle RadiusX="10" RadiusY="10" Fill="#a7c958" Name="btnMilk" Grid.Row="2" Margin="15,0,10,0" MouseDown="btnMilk_MouseDown"></Rectangle>
+                    <Rectangle RadiusX="10" RadiusY="10" Fill="#a7c958" Name="btnNuts" Grid.Row="2" Grid.Column="2" Margin="15,0,10,0" MouseDown="btnNuts_MouseDown"></Rectangle>
+                    <Image Margin="26,10,21,10" Source="C:/Users/User/Desktop/resources/pereferences/no-gluten.png" Stretch="Fill" MouseDown="btnGluten_MouseDown"/>
+                    <Image Grid.Column="1" Margin="23,4,17,6" Source="C:/Users/User/Desktop/resources/pereferences/no-soy.png" Stretch="Fill" MouseDown="btnSoy_MouseDown"/>
+                    <Image Margin="26,9,23,8" Grid.Row="2" Source="C:/Users/User/Desktop/resources/pereferences/no-milk.png" Stretch="Fill" MouseDown="btnMilk_MouseDown"/>
+                    <Image Grid.Column="1" Margin="27,6,20,10" Grid.Row="2" Source="C:/Users/User/Desktop/resources/pereferences/no-nuts2.png" Stretch="Fill" MouseDown="btnNuts_MouseDown"/>
+
+
+                </Grid>
+
+                <StackPanel Margin="0,10,0,0">
+                    <Button Width="100" 
+                    Height="35"
+                    Content="Submit"
+                            FontSize="22"
+                    Foreground="White"
+                            BorderBrush="White"
+                            BorderThickness="2"
+                    Background="Transparent"
+                    Opacity="0.5"  Click="Button_Click"
+                    />
+
+                </StackPanel>
+
+            </StackPanel>
+
+
+
+        </Grid>
+    </Grid>
+</UserControl>

@@ -121,3 +121,9 @@ venv.bak/
 
 ## Additional for IntelliJ
 out/
+frontend/HackathonFrontWPF/.vs/
+frontend/HackathonFrontWPF/HackathonFrontWPF/obj/
+frontend/HackathonFrontWPF/HackathonFrontWPF/bin/
+frontend/HackathonFrontWPF/HackathonFrontWPF/HackathonFrontWPF.csproj*
+.vs/
+frontend/HackathonFrontWPF/HackathonFrontWPF/Properties/
