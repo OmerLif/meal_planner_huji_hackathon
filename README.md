@@ -23,7 +23,7 @@ The main UI features that makes PrePair fun and easy to use:
 
 
 ## Techonological Stack
-This web app was developed in 24 hours during the HUJI Hackathon 2022, and won 4th place in the competition (out of 48 groups).
+This web app was developed in 24 hours during the HUJI Hackathon 2022, and won 4th place in the competition (out of 55 groups).
 It is designed to be a mobile app, but our MVP is a windows application, with a fully functional frontend user interface built using Visual C#, along with a funcational backend that has a Flask server and a SQLite database. 
 We are using the incredible Chef Transformer to generate our AI recipes - https://huggingface.co/spaces/flax-community/chef-transformer
 
